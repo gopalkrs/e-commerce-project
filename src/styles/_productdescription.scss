@@ -1,0 +1,152 @@
+.ProductDescription{
+    background-color: #fff;
+    border-top: 1px solid #f0dfdf;
+    border-bottom: 1px solid #f0dfdf;
+    width: fit-content;
+    margin: 80px 20px;
+    padding: 20px;
+
+    .description-about{
+        h4{
+            color: #404040;
+            padding: 10px 0px;
+        }
+        p{
+            color: #707070;
+            font-size: 13px;
+        }
+    }
+
+.description-price-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    img{
+        width: 400px;
+    }
+    input {
+        padding: 2px;
+        border: 1px solid #d3c3c3;
+        color: #404040;
+        margin: 0px 4px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        margin: 0px;
+        background-color: transparent;
+        border: 1px solid #d3c3c3;
+        color: #404040;
+        cursor: pointer;
+        padding: 2px;
+        
+        &:hover{
+            background-color: #f0ecec;
+        }
+    }
+
+    .description-price{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        padding: 10px;
+
+        p.item-name{
+            color: #404040;
+        }
+    }
+
+    .price-quantity{
+        margin-top: 5px;
+        p.quantity{
+            margin: 6px 0px;
+            padding: 6px;
+            text-align: center;
+            width: fit-content;
+            color: #fff;
+            background-color: blue;
+            border-radius: 30px;
+        }
+        p.price{
+            color: #000;
+        }
+    }
+    .adding-items-to-cart{
+        padding-top: 6px;
+    }
+    .add-to-cart{
+        border: none;
+        margin: 5px 0px;
+        padding: 10px;
+        color: #404040;
+        background-color: #f1db0fcb;
+        &:hover{
+            background-color: #eeda2bcb;
+            box-shadow: 1px 2px 1px #c5b5b5;
+            transition: all 0.2s;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width:660px) {
+
+    .ProductDescription{
+        margin: 80px 10px;
+        padding: 10px;
+
+
+    .description-about{
+        h4{
+            font-size: 12px;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
+
+    .description-price-img{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    
+        img{
+            width: 200px;
+        }
+    }
+    .description-price{
+
+        p.item-name{
+            font-size: 12px;
+        }
+    }
+    .price-quantity{
+        p.quantity{
+            padding: 4px;
+            font-size: 9px;
+        }
+        p.price{
+            font-size: 10px;
+        }
+    }
+    .add-to-cart{
+        font-size: 10px;
+        padding: 2px;
+    }
+}
+}

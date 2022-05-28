@@ -1,0 +1,32 @@
+.Homepage{
+
+
+    .img-carousel-div{
+        margin: 20px 80px;
+        padding: 20px 50px;
+
+        .image-title{
+            color: #404040;
+            font-size: 13px;
+        }
+        .link-product-page{
+            text-decoration: none;
+        }
+
+    }
+
+
+
+
+    @media screen and (max-width:660px) {
+
+        .img-carousel-div{
+            margin: 20px 10px;
+            padding: 20px 10px;
+            img{
+                height: fit-content;
+            }
+        }
+    }
+    
+}

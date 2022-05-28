@@ -1,0 +1,72 @@
+.ReviewRatings{
+    margin: 20px 20px;
+    padding: 0 20px;
+    .reviews-ratings-header{
+        color: #b89696;
+        border-bottom: 1px solid #f0dfdf;
+        padding: 5px;
+        font-size: 13px;
+        margin: 30px 0px;
+    }
+    label{
+        font-size: 12px;
+    }
+    select{
+        background-color: #efefef;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        color: #000;
+    }
+    textarea{
+        border: 1px solid #808080;
+        background-color: #ffffff;
+        padding: 5px;
+        resize: none;
+    }
+    .submit-btns-div{
+        button{
+            background-color: rgb(16, 16, 236);
+            color: #fff;
+            cursor: pointer;
+            margin: 5px 0px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            &:hover{
+                background: rgb(79, 79, 202);
+                transition: 0.3s all;
+            }
+        }
+    }
+    .list-of-reviews{
+        border-top: 1px solid #efefef;
+        margin: 40px 0px;
+    }
+}
+
+
+
+@media screen  and (max-width: 660px) {
+    .ReviewRatings{
+        margin: 20px 10px;
+
+
+        .reviews-ratings-header{
+            font-size: 10px;
+        }
+        label{
+            font-size: 9px;
+        }
+
+        .submit-btns-div{
+            button{
+                padding: 5px;
+                font-size: 10px;
+            }
+        }
+        .list-of-reviews{
+            margin: 30px 0px;
+        }
+    }
+}

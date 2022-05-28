@@ -1,0 +1,113 @@
+.UserCart{
+    margin: 60px 20px;
+    
+
+    h4{
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    .usercart-inner-div{
+        border-top: 1px solid #f3eeee;
+        border-bottom: 1px solid #f3eeee;
+
+        .user-not-logged{
+            text-align: center;
+            margin: 50px 0px;
+            font-size: 13px;
+        }
+
+        .mycart{ 
+            margin: 40px;
+        }
+    
+    }
+
+    .place-order-div{
+        margin: 30px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding: 10px;
+
+        .total-amount{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        button{
+            background: rgb(231, 25, 42);
+            border: none;
+            padding: 8px;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 40%;
+
+            &:hover{
+                box-shadow: 1px 3px 3px #000;
+                transition: all 0.3s;
+            }
+        }
+    }
+    .place-order-div-hide{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 660px){
+    .UserCart{
+        margin: 60px 10px;
+        
+    
+        h4{
+            font-size: 11px;
+        }
+    
+        .usercart-inner-div{
+            .user-not-logged{
+                text-align: center;
+                margin: 50px 0px;
+                font-size: 13px;
+            }
+    
+            .mycart{ 
+                margin: 10px;
+            }
+        
+        }
+    
+        .place-order-div{
+    
+            .total-amount{
+                font-size: 12px;
+            }
+    
+            button{
+                background: rgb(231, 25, 42);
+                border: none;
+                padding: 5px;
+                font-weight: bold;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 60%;
+    
+                &:hover{
+                    box-shadow: 1px 3px 3px #000;
+                    transition: all 0.3s;
+                }
+            }
+        }
+        .place-order-div-hide{
+            display: none;
+        }
+    }   
+}

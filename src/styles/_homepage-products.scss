@@ -1,0 +1,28 @@
+.products-list{
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    justify-items:center;
+    align-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.products-list-div{
+    h4{
+        margin: 30px 0px 10px 50px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .products-list{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .products-list{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,108 @@
+.CartItem {
+
+    margin: 20px 0px;
+
+    .cartitem-box-div {
+        padding: 20px;
+        width: 60%;
+        margin: auto;
+        background-color: #fff;
+        border: 1px solid rgb(214, 214, 96);
+        border-radius: 5px;
+
+        .remove-item-btn-div {
+            display: flex;
+            justify-content: flex-end;
+
+            .remove-item {
+                color: #fff;
+                background: #404040;
+                padding: 6px;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: red;
+                    transition: 0.3s all;
+                }
+            }
+        }
+
+        img {
+            height: 150px;
+            padding: 5px;
+        }
+
+        .product-name {
+            color: #404040;
+            font-size: 13px;
+            margin: 5px 8px 5px 5px;
+            text-decoration: underline;
+        }
+    }
+
+    .product-links {
+        text-decoration: none;
+    }
+
+    .description-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .product-info {
+            margin: 30px 0px 10px 0px;
+        }
+
+        .info-header {
+            color: #606060;
+            font-size: 12px;
+            margin: 5px 0px;
+        }
+
+        .info-value {
+            color: #fff;
+            font-size: 12px;
+            width: fit-content;
+            padding: 10px;
+            background: rgb(185, 185, 218);
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 660px) {
+    .CartItem {
+        .cartitem-box-div {
+            padding: 10px;
+            width: 90%;
+
+            img {
+                height: 120px;
+                padding: 5px;
+            }
+
+            .product-name {
+                font-size: 10px;
+            }
+        }
+
+        .description-div {
+            .product-info {
+                margin: 30px 0px 10px 0px;
+            }
+
+            .info-header {
+                font-size: 10px;
+            }
+
+            .info-value {
+                font-size: 9px;
+                width: fit-content;
+                padding: 5px;
+            }
+        }
+    }
+}

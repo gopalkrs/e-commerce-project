@@ -1,0 +1,62 @@
+.grocery-items-list{
+    padding: 5px;
+    margin-top: 50px;
+    display: grid;
+    justify-items:center;
+    align-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.paths{
+    margin: 50px 30px;
+
+    p{
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+.product-card-links{
+    text-decoration: none;
+}
+.product-filters{
+    margin: 20px 30px;
+    width: fit-content;
+    background: rgb(48, 50, 187);
+    color: #fff;
+    padding: 0px 5px;
+    border-radius: 5px;
+    label{
+        font-size: 12px;
+    }
+    select{
+        background: transparent;
+        color: rgb(197, 146, 146);
+        padding: 5px;
+        appearance: none;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+
+
+
+@media screen and (max-width:660px) {
+    .grocery-items-list{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .paths{
+        margin: 30px 20px;
+
+        p{
+            font-size: 8px;
+        }
+    }
+}
+
+@media screen and (max-width:420px) {
+    .grocery-items-list{
+        grid-template-columns: 1fr;
+    }
+}

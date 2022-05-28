@@ -1,0 +1,81 @@
+.ReviewOutput{
+    margin: 50px 0px;
+    background-color: #a0a0a0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 50%;
+    .posted-time{
+        p{
+            font-size: 10px;
+            color: #404040;
+            text-align: right;
+        }
+    }
+    .name{
+        padding: 5px 0px;
+        border-bottom: 1px solid #606060;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        p{
+            font-size: 14px;
+            color: #000;
+        }
+        .delete-icon{
+            margin-left: 8px;
+            button{
+                border: none;
+                background: transparent;
+                padding: 5px;
+                cursor: pointer;
+                color: #000;
+                font-size: 16px;
+            }
+        }
+    }
+    .rating-comment{
+        padding: 5px 0px;
+        p{
+            font-size: 12px;
+            margin: 4px 0px;
+            color: #202020;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:660px){
+    
+
+    .ReviewOutput{
+        margin: 20px 0px;
+        padding: 6px;
+        width: 90%;
+
+        .posted-time{
+            p{
+                font-size: 9px;
+                color: #404040;
+                text-align: right;
+            }
+        }
+        .name{
+            padding: 2px 0px;
+            p{
+                font-size: 12px;
+            }
+            .delete-icon{
+                button{
+                    font-size: 14px;
+                }
+            }
+        }
+        .rating-comment{
+            p{
+                font-size: 10px;
+                margin: 4px 0px;
+            }
+        }
+    }
+}

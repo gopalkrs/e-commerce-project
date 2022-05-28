@@ -1,0 +1,43 @@
+.Sidebar{
+    .navigation-bar{
+        background-color: rgb(235, 187, 55);
+        width: 240px;
+        height: 100vh;
+        transition: all 1s ease-in-out;
+        position: absolute;
+        left: -100%;
+        z-index: 10;
+    }
+    .navigation-bar.active{
+        left: 0;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    .links{
+        text-decoration: none;
+    }
+    li{
+        color: #fff;
+        padding: 20px 30px;
+
+        &:active{
+            background-color: rgb(224, 172, 75);
+        }
+        &:hover{
+            background-color: #815a5a;
+        }
+    }
+}
+
+
+@media screen and (max-width: 660px) {
+    .Sidebar{
+        li{
+            color: #fff;
+            padding: 20px 30px;
+            font-size: 10px;
+        }
+    }
+}

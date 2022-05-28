@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+button{
+    font-family: 'Overpass', sans-serif;
+}
+
+
+@import "./header";
+@import "./sidebar";
+@import "./productcard";
+@import "./productslist";
+@import "./productdescription";
+@import "./signinpages";
+@import "./reviewratings";
+@import "./reviewoutput";
+@import "./cartitem";
+@import "./usercart";
+@import "./homepage";
+@import "./footer";
+@import "./homepage-products";

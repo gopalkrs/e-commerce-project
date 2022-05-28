@@ -1,0 +1,115 @@
+.ProductCard{
+    .main-div{
+        background-color: transparent;
+        border: 1px solid #f3eeee;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 220px;
+        height: 300px;
+
+        &:hover{
+            border: 1px solid #e9c7c7;
+            transition: all 0.5s;
+        }
+    }
+    img{
+        width: 110px;
+        height: 140px;
+    }
+    input {
+        padding: 2px;
+        border: 1px solid #d3c3c3;
+        color: #404040;
+        margin: 0px 4px;
+        &:focus {
+            outline: none;
+        }
+    }
+    button {
+        margin: 0px;
+        background-color: transparent;
+        border: 1px solid #d3c3c3;
+        color: #404040;
+        cursor: pointer;
+        padding: 2px;
+        font-family: 'Stint Ultra Condensed', cursive;
+        font-family: 'Ubuntu', sans-serif;
+        
+        &:hover{
+            background-color: #f0ecec;
+        }
+    }
+    .add-remove{
+        text-align: center;
+    }
+    .add-to-cart{
+        border: none;
+        margin: 5px;
+        padding: 5px;
+        color: #404040;
+        background-color: #f1db0fcb;
+        &:hover{
+            background-color: #eeda2bcb;
+            box-shadow: 1px 2px 1px #c5b5b5;
+            transition: all 0.2s;
+        }
+    }
+    .item-name{
+        color: #000;
+        font-size: 15px;
+        text-align: center;
+        padding: 5px 0px;
+    }
+    .price-quantity{
+        border-top: 1px solid #f3eeee;
+        display: flex;
+        align-items:center;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 5px 3px;
+        p{
+            color: #404040;
+            font-size: 14px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    @media screen and (max-width:660px) {
+
+
+        .main-div{
+            width: 180px;
+            height: 240px;
+        }
+
+        img{
+            width: 80px;
+            height: 100px;
+        }
+
+
+        .add-to-cart{
+            font-size: 9px;
+        }
+        .item-name{
+            font-size: 10px;
+        }
+        .price-quantity{
+            padding: 5px 3px;
+            p{
+                color: #404040;
+                font-size: 10px;
+            }
+        }
+    }
+}
