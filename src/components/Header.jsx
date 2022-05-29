@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faSearch, faBagShopping, faListSquares, faCircleUser, faCartFlatbed } from '@fortawesome/free-solid-svg-icons'
 import ProductContext from "./contexts/productContext";
 
-function Header({ navOpen, setNavOpen }) {
+function Header({ navOpen, setNavOpen, sidebarHandler }) {
 
   const {cartsize, searchProductHandler, searchResult} = useContext(ProductContext);
 
@@ -30,7 +30,7 @@ function Header({ navOpen, setNavOpen }) {
     return (
       <div>
         <div className='navbar'>
-          <div className='navbar-items'>
+          <div className='navbar-items' onClick={sidebarHandler}>
             <Link to="/" className='header-link'>
               <h1>shopyard <FontAwesomeIcon icon={faCartFlatbed} /> </h1>
             </Link>
@@ -51,7 +51,7 @@ function Header({ navOpen, setNavOpen }) {
             </div>
           </div>
           <div>
-            <div className='search-input'>
+            <div className='search-input' onClick={sidebarHandler}>
               <input type="text" placeholder='Search for Products..' onChange={searchProductHandler} />
             </div>
           </div>
@@ -68,7 +68,7 @@ function Header({ navOpen, setNavOpen }) {
   return (
     <div>
       <div className='navbar'>
-        <div className='navbar-items'>
+        <div className='navbar-items' onClick={sidebarHandler}>
           <Link to="/" className='header-link'>
             <h1>shopyard <FontAwesomeIcon icon={faBasketShopping} /> </h1>
           </Link>
@@ -84,7 +84,7 @@ function Header({ navOpen, setNavOpen }) {
           </div>
         </div>
         <div>
-          <div className='search-input'>
+          <div className='search-input' onClick={sidebarHandler}>
             <input type="text" placeholder='Search for Products..' />
           </div>
         </div>

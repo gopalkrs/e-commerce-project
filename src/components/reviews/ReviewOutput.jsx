@@ -11,7 +11,7 @@ function ReviewOutput({comment, rating, userid, reviewid, date, productid}){
 
     const getData = async ()=>{
         try{
-            const data = await axios.get(`http://localhost:4000/api/auth/${userid}`);
+            const data = await axios.get(`/api/auth/${userid}`);
             setName(data.data.data);
         }catch(err){
             console.log(err);
@@ -20,7 +20,7 @@ function ReviewOutput({comment, rating, userid, reviewid, date, productid}){
     const deleteReviewHandler = async ()=>{
         let uId = localStorage.getItem('userId');
         try{
-            const data = await axios.delete(`http://localhost:4000/api/reviews/${productid}/${uId}/${reviewid}`);
+            const data = await axios.delete(`/api/reviews/${productid}/${uId}/${reviewid}`);
         }catch(err){
             console.log(err);
         }

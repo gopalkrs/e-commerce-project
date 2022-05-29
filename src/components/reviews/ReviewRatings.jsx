@@ -31,7 +31,7 @@ function ReviewRatings({ productid }) {
                 try {
                     const token = localStorage.getItem('userToken');
 
-                    const promiseData = await axios.post(`http://localhost:4000/api/reviews`, postReview, {
+                    const promiseData = await axios.post(`/api/reviews`, postReview, {
                         'headers': {
                             'authorization': `Bearer ${token}`
                         }
@@ -58,7 +58,7 @@ function ReviewRatings({ productid }) {
     }
 
     const getAllReviews = async()=>{
-        const data = await axios.get(`http://localhost:4000/api/reviews/${productid}`);
+        const data = await axios.get(`/api/reviews/${productid}`);
         setReviewsData(data.data.data);
     }
 

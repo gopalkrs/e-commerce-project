@@ -6,14 +6,18 @@ import { ProductProvider } from "./components/contexts/productContext"
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
+  
+  const sidebarHandler=()=>{
+    setNavOpen(false);
+  }
 
   return (
-    <div className="app">
+    <div className="app" >
       <div className="Homepage">
         <ProductProvider>
-          <Header navOpen={navOpen} setNavOpen={setNavOpen} />
+          <Header navOpen={navOpen} setNavOpen={setNavOpen} sidebarHandler={sidebarHandler}/>
           <Sidebar navOpen={navOpen} />
-          <div className='routes'>
+          <div className='routes' onClick={sidebarHandler}>
             <Routes>
               <Route path='/' element={<Homepage />} />
               <Route path='/fruits-vegetables' element={<FruitProducts />} />
@@ -31,7 +35,9 @@ function App() {
               <Route path='/mycart' element={<UserCart />} />
             </Routes>
           </div>
-          <Footer />
+          <div onClick={sidebarHandler}>
+            <Footer />
+          </div>
         </ProductProvider>
       </div>
     </div>
