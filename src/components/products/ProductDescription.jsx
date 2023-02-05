@@ -38,7 +38,7 @@ function ProductDescription(props) {
       else{
         try{
           const token = localStorage.getItem('userToken');
-          const addedItem = await axios.post(`/api/mycart`, cartItems, {
+          const addedItem = await axios.post(`${process.env.REACT_APP_API_URL}/api/mycart`, cartItems, {
             'headers': {
                 'authorization': `Bearer ${token}`
             }
