@@ -24,10 +24,10 @@ const items = [
     }
 ]
 
-function Sidebar({navOpen}) {
+function Sidebar({navOpen, sidebarHandler}) {
 
     return (
-        <div className="Sidebar">
+        <div className="Sidebar" onClick={sidebarHandler}>
             <div className={navOpen? 'navigation-bar active': 'navigation-bar'}>
                 <ul className='nav-list'>
                     {items?.map((item) => (

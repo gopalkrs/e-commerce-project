@@ -11,7 +11,7 @@ export function ProductProvider({ children }) {
 
     const userid = localStorage.getItem('userId');
     const getProducts = async () => {
-        const data = await axios.get(`/api/mycart/${userid}`);
+        const data = await axios.get(`${process.env.REACT_APP_API_URL}/api/mycart/${userid}`);
         setCart(data.data.data);
     }
 
@@ -21,7 +21,7 @@ export function ProductProvider({ children }) {
             setSearchResult(false);
         }else{
             try{
-                const data = await axios.get(`/api/filters/search?text=${searchtext}`);
+                const data = await axios.get(`${process.env.REACT_APP_API_URL}/api/filters/search?text=${searchtext}`);
                 setSearchResult(data.data.data);
                 setShowResult(true);
             }catch(err){

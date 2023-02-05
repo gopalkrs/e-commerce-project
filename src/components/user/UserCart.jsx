@@ -29,13 +29,13 @@ function UserCart() {
   const token = localStorage.getItem('userToken');
 
   const getCartItems = async () => {
-    const data = await axios.get(`/api/mycart/${userid}`);
+    const data = await axios.get(`${process.env.REACT_APP_API_URL}/api/mycart/${userid}`);
     setAddedItems(data.data.data);
   }
 
   const onSuccess = async (rzp_data, orderId)=>{
     try{
-      const data = await axios.put(`/api/mycart`, {rzp_data: rzp_data, userid: userid},{
+      const data = await axios.put(`${process.env.REACT_APP_API_URL}/api/mycart`, {rzp_data: rzp_data, userid: userid},{
           'headers': {
             'authorization': `Bearer ${token}`
           }
@@ -59,7 +59,7 @@ function UserCart() {
     const totalpriceobject = {
       "totalprice": grossItemsPrice
     }
-    const data = await axios.post("/api/payments", totalpriceobject, {
+    const data = await axios.post(`${process.env.REACT_APP_API_URL}/api/payments`, totalpriceobject, {
       'headers': {
         'authorization': `Bearer ${token}`
       }

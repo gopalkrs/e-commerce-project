@@ -14,8 +14,9 @@ function Homepage() {
   const {searchResult, setSearchResult, showResult, setShowResult} = useContext(ProductContext);
 
   const getProductHandler = async () => {
-    const res = await axios.get(`/api/filters/popular`);
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/filters/popular`);
     setProducts(res.data.data);
+    console.log(res);
   }
 
   useEffect(() => {

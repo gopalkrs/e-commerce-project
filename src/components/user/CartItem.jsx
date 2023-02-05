@@ -10,7 +10,7 @@ function CartItem({ price, date, itemid, totalno, totalprice, cartitemid, ordere
 
   const getProductData = async () => {
     try {
-      const res = await axios.get(`/api/products/${itemid}`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/${itemid}`);
       setItems(res.data.data);
     } catch (err) {
       console.log(err);
@@ -20,7 +20,7 @@ function CartItem({ price, date, itemid, totalno, totalprice, cartitemid, ordere
   const removeCartItemHandler = async ()=>{
     let uId = localStorage.getItem('userId');
     try{
-        const promisedata = await axios.delete(`/api/mycart/${uId}/${cartitemid}`);
+        const promisedata = await axios.delete(`${process.env.REACT_APP_API_URL}/api/mycart/${uId}/${cartitemid}`);
         alert(promisedata.data.message);
     }catch(err){
         console.log(err);

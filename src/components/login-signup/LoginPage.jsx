@@ -29,7 +29,7 @@ function LoginPage() {
         //const postSignup = { ...loginData, id: uuidv4() };
         let promiseData;
         try {
-            promiseData = await axios.post(`/api/auth/login`, loginData);
+            promiseData = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, loginData);
             const {message} = promiseData.data;
             setMessage(message);
             const {_id, name} = promiseData.data.data.existingUser;
@@ -54,7 +54,7 @@ function LoginPage() {
         }
         let promiseData;
         try {
-            promiseData = await axios.post(`/api/auth/login`, demoPost);
+            promiseData = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, demoPost);
             const {message} = promiseData.data;
             setMessage(message);
             const {_id, name} = promiseData.data.data.existingUser;

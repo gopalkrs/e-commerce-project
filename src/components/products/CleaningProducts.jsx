@@ -9,7 +9,7 @@ function CleaningProducts() {
   const [items, setItems] = useState([]);
   const getProductData = async()=>{
     try{
-      const res = await axios.get(`/api/products/?category=cleaning-household`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/?category=cleaning-household`);
       setItems(res.data.data);
     }catch(err){
       console.log(err);
@@ -18,12 +18,12 @@ function CleaningProducts() {
 
   const handleProductsFilter = async (e)=>{
     if(e.target.value==="1"){
-      const res = await axios.get(`/api/filters/price/?category=cleaning-household`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/filters/price/?category=cleaning-household`);
       setItems(res.data.data);
       console.log(res);
     }
     if(e.target.value==="2"){
-      const res = await axios.get(`/api/filters/ratings/?category=cleaning-household`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/filters/ratings/?category=cleaning-household`);
       setItems(res.data.data);
       console.log(res);
     }

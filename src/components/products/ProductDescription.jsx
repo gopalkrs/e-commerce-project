@@ -57,7 +57,7 @@ function ProductDescription(props) {
 
   const getProductData = async () => {
     try {
-      const res = await axios.get(`/api/products/${itemid}`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/${itemid}`);
       setItems(res.data.data);
       setCartItems({...cartItems, price: res.data.data.price});
     } catch (err) {

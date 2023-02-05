@@ -27,7 +27,7 @@ function SignupPage() {
 
         //const postSignup = { ...signupData, id: uuidv4() };
         try {
-            const promiseData = await axios.post(`/api/auth/signup`, signupData);
+            const promiseData = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, signupData);
             setLoginMessage(promiseData.data.message);
             if(promiseData){
                 setsignupData({

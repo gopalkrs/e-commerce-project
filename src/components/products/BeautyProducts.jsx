@@ -9,7 +9,7 @@ function BeautyProducts() {
 
   const getProductData = async () => {
     try {
-      const res = await axios.get(`/api/products/?category=beauty-healthcare`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/?category=beauty-healthcare`);
       setItems(res.data.data);
     } catch (err) {
       console.log(err);
@@ -18,12 +18,12 @@ function BeautyProducts() {
 
   const handleProductsFilter = async (e)=>{
     if(e.target.value==="1"){
-      const res = await axios.get(`/api/filters/price/?category=beauty-healthcare`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/filters/price/?category=beauty-healthcare`);
       setItems(res.data.data);
       console.log(res);
     }
     if(e.target.value==="2"){
-      const res = await axios.get(`/api/filters/ratings/?category=beauty-healthcare`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/filters/ratings/?category=beauty-healthcare`);
       setItems(res.data.data);
       console.log(res);
     }

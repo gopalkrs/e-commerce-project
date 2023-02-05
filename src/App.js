@@ -16,7 +16,7 @@ function App() {
       <div className="Homepage">
         <ProductProvider>
           <Header navOpen={navOpen} setNavOpen={setNavOpen} sidebarHandler={sidebarHandler}/>
-          <Sidebar navOpen={navOpen} />
+          <Sidebar navOpen={navOpen} sidebarHandler={sidebarHandler}/>
           <div className='routes' onClick={sidebarHandler}>
             <Routes>
               <Route path='/' element={<Homepage />} />
