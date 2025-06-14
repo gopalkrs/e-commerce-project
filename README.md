@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# 🛍️ E-Commerce Project (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, full-stack e-commerce frontend application built with **Reactjs**, **CSS**. This project connects with a custom backend API to deliver a complete shopping experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tech Stack
 
-### `npm start`
+- **Frontend Framework**: Reactjs
+- **Styling**: Custom CSS
+- **State Management**: Redux
+- **Data Fetching**: axios
+- **Authentication**: Login/password/jwt based
+- **Deployment**: Vercel
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🎯 Features
 
-### `npm test`
+- ✅ Full e-commerce frontend UI
+- ✅ Product listing, product details, cart, and checkout flow
+- ✅ Integrated authentication with Google, GitHub via NextAuth.js
+- ✅ Zustand-based local state for cart & user sessions
+- ✅ Dynamic server-side rendered pages for SEO
+- ✅ Fully responsive and mobile-first design with TailwindCSS
+- ✅ Smooth UI interactions using Framer Motion
+- ✅ API calls integrated with backend server
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🏃‍♂️ Getting Started Locally
+1️⃣ Clone the repository
+```
+git clone https://github.com/gopalkrs/e-commerce-project.git
+cd e-commerce-project
+```
+2️⃣ Install dependencies
+```
+npm install
+or
+yarn install
+```
+3️⃣ Configure Environment Variables
+Create a .env.local file 
 
-### `npm run build`
+4️⃣ Run the development server
+```
+npm run dev
+or
+yarn dev
+The application will start on: http://localhost:3000.
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🔐 Authentication Flow
+OAuth via Google and GitHub using NextAuth.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Secure JWT-based session management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Protected routes for user profile, cart, and checkout
 
-### `npm run eject`
+🔧 Backend Dependency
+This frontend is designed to work with your Ecommerce Backend API
+Backend Repo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Make sure your backend is up and running for full functionality.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
